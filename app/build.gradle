@@ -1,0 +1,26 @@
+android {
+    defaultConfig {
+        applicationId "dev.dai.dependabotsample"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation "androidx.core:core-ktx:$rootProject.core_ktx"
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompat"
+    implementation "com.google.android.material:material:$rootProject.material"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayout"
+    testImplementation "junit:junit:$rootProject.junit"
+    androidTestImplementation "androidx.test.ext:junit:$rootProject.ext_junit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso"
+
+    // module
+    implementation project(':test')
+}
