@@ -10,7 +10,7 @@ buildscript {
         targetSdkVersion = 31
         buildToolsVersion = "30.0.3"
 
-        core_ktx = "1.6.0"
+        core_ktx = "1.8.0"
         appcompat = "1.4.0"
         material = "1.4.0"
         constraintlayout = "2.1.3"
