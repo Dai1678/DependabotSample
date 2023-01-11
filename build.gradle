@@ -5,10 +5,9 @@ buildscript {
 
     ext {
         // SDK and tools
-        compileSdkVersion = 31
+        compileSdkVersion = 33
         minSdkVersion = 23
-        targetSdkVersion = 31
-        buildToolsVersion = "30.0.3"
+        targetSdkVersion = 33
 
         core_ktx = "1.9.0"
         appcompat = "1.4.0"
@@ -17,7 +16,6 @@ buildscript {
         junit = "4.13.2"
         ext_junit = "1.1.5"
         espresso = "3.4.0"
-
         mockk = "1.13.3"
     }
 
@@ -30,7 +28,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:7.3.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -66,7 +64,6 @@ subprojects {
 
     android {
         compileSdkVersion rootProject.compileSdkVersion
-        buildToolsVersion rootProject.buildToolsVersion
         defaultConfig {
             minSdkVersion rootProject.minSdkVersion
             targetSdkVersion rootProject.targetSdkVersion
@@ -92,10 +89,11 @@ subprojects {
         }
         kotlinOptions {
             jvmTarget = '1.8'
-            freeCompilerArgs += [
-                    "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi",
-                    "-Xopt-in=kotlin.RequiresOptIn",
-            ]
+        }
+
+        packagingOptions {
+            exclude "META-INF/LICENSE.md"
+            exclude "META-INF/LICENSE-notice.md"
         }
     }
 
