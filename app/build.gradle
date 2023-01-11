@@ -20,6 +20,9 @@ dependencies {
     testImplementation "junit:junit:$rootProject.junit"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.ext_junit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso"
+    implementation "com.google.dagger:dagger-android:$rootProject.dagger"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger"
+    implementation "com.google.accompanist:accompanist-pager:$rootProject.accompanist"
 
     // module
     implementation project(':test')

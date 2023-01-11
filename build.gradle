@@ -17,6 +17,8 @@ buildscript {
         ext_junit = "1.1.5"
         espresso = "3.4.0"
         mockk = "1.13.3"
+        dagger = "2.44.1"
+        accompanist = "0.25.1"
     }
 
     repositories {
