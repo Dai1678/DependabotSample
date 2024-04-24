@@ -22,8 +22,7 @@ updates:
           - "major"
         patterns:
           - "org.jetbrains.kotlin*"
-          - "androidx.compose:compose-bom"
-          - "androidx.lifecycle:lifecycle-viewmodel-compose"
+          - "*compose*"
           - "com.google.accompanist*"
           - "io.kotest*"
       androidx-dependencies:
@@ -42,6 +41,7 @@ updates:
           - "major"
         patterns:
           - "*junit*"
+          - "*robolectric*"
 
   - package-ecosystem: github-actions
     directory: "/"
