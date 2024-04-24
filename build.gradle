@@ -15,7 +15,7 @@ buildscript {
         constraintlayout = "2.1.4"
         junit = "4.13.2"
         ext_junit = "1.1.5"
-        espresso = "3.4.0"
+        espresso = "3.5.1"
         mockk = "1.13.10"
         dagger = "2.44.2"
         accompanist = "0.27.0"
