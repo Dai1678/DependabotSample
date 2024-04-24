@@ -40,9 +40,9 @@ updates:
           - "minor"
           - "major"
         patterns:
+          - "androidx.test*"
           - "*junit*"
           - "*robolectric*"
-          - "*espressso-core"
 
   - package-ecosystem: github-actions
     directory: "/"
