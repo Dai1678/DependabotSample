@@ -23,8 +23,12 @@ jobs:
         uses: dependabot/fetch-metadata@v1.3.5
       - name: Approve & enable auto-merge for Dependabot PR
         if: |
-          steps.metadata.outputs.update-type == 'version-update:semver-patch' &&
-          steps.metadata.outputs.previous-version >= '1.0.0'
+          (steps.metadata.outputs.update-type != 'version-update:semver-major' &&
+          steps.metadata.outputs.previous-version >= '1.0.0' &&
+          steps.metadata.outputs.package-ecosystem == 'github_actions') ||
+          (steps.metadata.outputs.update-type == 'version-update:semver-patch' &&
+          steps.metadata.outputs.previous-version >= '1.0.0' &&
+          steps.metadata.outputs.package-ecosystem == 'gradle')
         run: |
           gh pr review --approve "$PR_URL"
           gh pr edit "$PR_URL" -t "(auto merged) $PR_TITLE"
