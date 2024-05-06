@@ -42,7 +42,7 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
     configurations.all {
-        resolutionStrategy.force 'org.objenesis:objenesis:3.3'
+        resolutionStrategy.force 'org.objenesis:objenesis:3.4'
     }
 }
 
