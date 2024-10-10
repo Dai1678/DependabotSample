@@ -16,7 +16,7 @@ buildscript {
         junit = "4.13.2"
         ext_junit = "1.1.5"
         espresso = "3.3.0"
-        mockk = "1.13.12"
+        mockk = "1.13.13"
         dagger = "2.44.2"
         accompanist = "0.27.0"
     }
